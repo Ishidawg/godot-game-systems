@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyofkra2umdcm"]
+
+[ext_resource type="Texture2D" uid="uid://ssh4kbvlukm4" path="res://assets/UI/dialog_box.png" id="1_c7omd"]
+[ext_resource type="Script" uid="uid://c4yr1oav15of8" path="res://scenes/dialog/dialog_screen.gd" id="1_doq2k"]
+[ext_resource type="FontFile" uid="uid://dactcqlk4amps" path="res://fonts/EquipmentPro/EquipmentPro.ttf" id="2_xjrgu"]
+[ext_resource type="Texture2D" uid="uid://cos7b8q0xjmu0" path="res://assets/DialogCharacters/Red_Lancer.png" id="3_4beo4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_doq2k"]
+line_spacing = 0.0
+font = ExtResource("2_xjrgu")
+font_color = Color(0.24286577, 0.2842181, 0.3764366, 1)
+
+[node name="DialogScreen" type="Control" node_paths=PackedStringArray("_name", "_dialog", "_character")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_doq2k")
+_name = NodePath("DialogTexture/DialogVerticalContainer/DialogName")
+_dialog = NodePath("DialogTexture/DialogVerticalContainer/RichTextLabel")
+_character = NodePath("DialogTexture/DialogCharacter")
+
+[node name="DialogTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -400.0
+offset_right = 300.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_c7omd")
+stretch_mode = 4
+
+[node name="DialogCharacter" type="TextureRect" parent="DialogTexture"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -108.0
+offset_bottom = 108.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("3_4beo4")
+stretch_mode = 5
+flip_h = true
+
+[node name="DialogVerticalContainer" type="VBoxContainer" parent="DialogTexture"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 18.0
+offset_right = -17.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogName" type="Label" parent="DialogTexture/DialogVerticalContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Sr. Bomber Da SIlva"
+label_settings = SubResource("LabelSettings_doq2k")
+vertical_alignment = 1
+autowrap_mode = 2
+text_overrun_behavior = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogTexture/DialogVerticalContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.24313726, 0.28235295, 0.3764706, 1)
+theme_override_colors/font_shadow_color = Color(0.45840502, 0.45840502, 0.45840514, 0.6039216)
+theme_override_fonts/normal_font = ExtResource("2_xjrgu")
+theme_override_font_sizes/normal_font_size = 32
+text = "Welcome to Floating Islands - ya I know it is not actually floating the skyes, but take look: skyes and water here it's same color haha! Well, this is a test demo of what this world could be, this is my destiny... be an npc that only test this sweet dialog box... And I'll be forever serving this only porpuse..."
+fit_content = true
