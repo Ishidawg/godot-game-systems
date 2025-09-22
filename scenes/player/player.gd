@@ -16,7 +16,7 @@ func player_movement(delta: float) -> void:
 
 	velocity = direction.normalized() * SPEED
 	
-	print(direction)
+	#print(direction)
 
 	if velocity != Vector2.ZERO:
 		player_sprites.play("run")
