@@ -1,11 +1,10 @@
 {
-	"grave_stone": [
-		"An anciet warrior tried to walk around these path before",
-		"but as you see... He did not did well",
-		"in fact, the first demon that cracks the sky just in the next platform killed him",
-		"and now he's been under this ground... R.I.P Robaro Miamoto"
+	"red_lancer_soldier_title": [
+		"Sr. Crestfallen"
 	],
-	"generic_chest": [
-		"Hi! Imma object that likes to talk haha!"
+	"red_lancer_soldier": [
+		"Welcome to Floating Islands - ya I know it is not actually floating the skyes, but take look: skyes and water here it's same color haha!",
+		"Well, this is a test demo of what this world could be, this is my destiny...",
+		"be an npc that only test this sweet dialog box... And I'll be forever serving this only purpose...",
 	]
 }

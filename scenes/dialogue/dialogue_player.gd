@@ -3,11 +3,12 @@ extends Control
 @export_file("*.json") var scene_text_file
 
 var scene_text := {}
+#var selected_title := []
 var selected_text := []
 var in_progress := false
 
 @onready var background := $DialogTexture
-@onready var npm_name := $DialogTexture/DialogVerticalContainer/DialogName
+@onready var npc_name := $DialogTexture/DialogVerticalContainer/DialogName
 @onready var dialogue_text := $DialogTexture/DialogVerticalContainer/RichTextLabel
 
 
@@ -22,25 +23,27 @@ func load_scene_text():
 		file.open(scene_text_file, FileAccess.READ)
 		return JSON.parse_string(file.get_file_as_string(scene_text_file))
 
-func show_text():
-	dialogue_text.text = selected_text.pop_front() # Removes and returns the first element of the array
+func show_dialogue():
+	dialogue_text.text = selected_text.pop_front() # Removes and returns the first element of the array fot the text content
 
 func next_line():
 	if selected_text.size() > 0:
-		show_text()
+		show_dialogue()
 	else:
 		finish()
 
 func finish():
+	npc_name.text = ""
 	dialogue_text.text = ""
 	background.visible = false
 	in_progress = false
 
-func on_display_dialog(text_key):
+func on_display_dialog(title_key, text_key):
 	if in_progress:
 		next_line()
 	else:
 		background.visible = true
 		in_progress = true
+		npc_name.text = str(scene_text[title_key].duplicate())
 		selected_text = scene_text[text_key].duplicate()
-		show_text()
+		show_dialogue()

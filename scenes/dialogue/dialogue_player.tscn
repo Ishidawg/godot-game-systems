@@ -70,5 +70,5 @@ theme_override_colors/default_color = Color(0.24313726, 0.28235295, 0.3764706, 1
 theme_override_colors/font_shadow_color = Color(0.45840502, 0.45840502, 0.45840514, 0.6039216)
 theme_override_fonts/normal_font = ExtResource("3_inhqr")
 theme_override_font_sizes/normal_font_size = 32
-text = "Welcome to Floating Islands - ya I know it is not actually floating the skyes, but take look: skyes and water here it's same color haha! Well, this is a test demo of what this world could be, this is my destiny... be an npc that only test this sweet dialog box... And I'll be forever serving this only porpuse..."
+text = "Welcome to Floating Islands - ya I know it is not actually floating the skyes, but take look: skyes and water here it's same color haha! Well, this is a test demo of what this world could be, this is my destiny... be an npc that only test this sweet dialog box... And I'll be forever serving this only purpose..."
 fit_content = true
