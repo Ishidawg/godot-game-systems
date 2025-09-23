@@ -21,10 +21,10 @@ script = ExtResource("1_713rx")
 
 [node name="DialogCharacter" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 764.0
-offset_top = 231.0
-offset_right = 1064.0
-offset_bottom = 531.0
+offset_left = 755.0
+offset_top = 207.0
+offset_right = 1055.0
+offset_bottom = 507.0
 texture = ExtResource("2_713rx")
 expand_mode = 2
 stretch_mode = 5
@@ -33,9 +33,9 @@ flip_h = true
 [node name="DialogTexture" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 340.0
-offset_top = 420.0
+offset_top = 400.0
 offset_right = 940.0
-offset_bottom = 720.0
+offset_bottom = 700.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("1_6mqn2")

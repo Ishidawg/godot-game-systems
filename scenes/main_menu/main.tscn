@@ -1151,7 +1151,8 @@ sources/0 = SubResource("TileSetAtlasSource_af3ms")
 [node name="main_scene" type="Node2D"]
 position = Vector2(-143, 48)
 
-[node name="HUD" parent="." instance=ExtResource("1_usqul")]
+[node name="HUD" parent="." node_paths=PackedStringArray("player_object") instance=ExtResource("1_usqul")]
+player_object = NodePath("../player")
 
 [node name="player" parent="." instance=ExtResource("1_xc0v1")]
 z_index = 2
