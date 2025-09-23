@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://l2mi15fwpic1"]
+
+[ext_resource type="PackedScene" uid="uid://dexyk2m4f8wgm" path="res://scenes/dialogue/dialogue_player.tscn" id="1_c0cnr"]
+[ext_resource type="Script" uid="uid://dxchxiw0uqvvx" path="res://scenes/HUD/hud.gd" id="1_glunx"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_glunx")
+
+[node name="DialogPlayer" parent="." instance=ExtResource("1_c0cnr")]
+size_flags_horizontal = 6
+size_flags_vertical = 6
+scene_text_file = "res://data/json/dialogs.json"
+
+[connection signal="close_dialogue" from="DialogPlayer" to="." method="_on_dialog_player_close_dialogue"]
+[connection signal="open_dialogue" from="DialogPlayer" to="." method="_on_dialog_player_open_dialogue"]

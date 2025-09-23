@@ -1,7 +1,12 @@
+class_name player
 extends CharacterBody2D
 
-const SPEED := 420.0
+
+var speed := 420.0
 @onready var player_sprites: AnimatedSprite2D = %player_sprites
+
+func _ready() -> void:
+	SignalDisplayDialogue.connect("display_dialog", Callable(self, "on_display_dialog"))
 
 func _process(delta: float) -> void:
 	player_movement(delta)
@@ -14,9 +19,7 @@ func player_movement(delta: float) -> void:
 	direction.x = Input.get_axis("left", "right")
 	direction.y = Input.get_axis("up", "down")
 
-	velocity = direction.normalized() * SPEED
-	
-	print(direction)
+	velocity = direction.normalized() * speed
 
 	if velocity != Vector2.ZERO:
 		player_sprites.play("run")
@@ -28,3 +31,4 @@ func player_movement(delta: float) -> void:
 	
 	if direction.x == 1:
 		player_sprites.flip_h = false
+	

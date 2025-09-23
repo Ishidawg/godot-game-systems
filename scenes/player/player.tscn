@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b568wjpkfhsqq"]
+[gd_scene load_steps=31 format=3 uid="uid://b568wjpkfhsqq"]
 
 [ext_resource type="Texture2D" uid="uid://dhu5nui0dcbu8" path="res://assets/Units/Blue Units/Warrior/Warrior_Idle.png" id="1_8afob"]
 [ext_resource type="Texture2D" uid="uid://bha6dp3xmcrjk" path="res://assets/Units/Blue Units/Warrior/Warrior_Attack2.png" id="1_lvxji"]
@@ -187,7 +187,11 @@ animations = [{
 radius = 14.0
 height = 48.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p47bc"]
+size = Vector2(108, 82)
+
 [node name="player" type="CharacterBody2D"]
+collision_layer = 5
 script = ExtResource("1_p47bc")
 
 [node name="player_sprites" type="AnimatedSprite2D" parent="."]
@@ -200,3 +204,11 @@ frame_progress = 0.46635774
 [node name="player_collision" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 10)
 shape = SubResource("CapsuleShape2D_lvxji")
+
+[node name="DialogInteractionArea" type="Area2D" parent="."]
+
+[node name="DialogCollision" type="CollisionShape2D" parent="DialogInteractionArea"]
+light_mask = 5
+visibility_layer = 0
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_p47bc")

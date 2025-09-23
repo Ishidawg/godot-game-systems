@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://dexyk2m4f8wgm"]
+
+[ext_resource type="Texture2D" uid="uid://ssh4kbvlukm4" path="res://assets/UI/dialog_box.png" id="1_6mqn2"]
+[ext_resource type="Script" uid="uid://dloxjl8fm2mb" path="res://scenes/dialogue/dialogue_player.gd" id="1_713rx"]
+[ext_resource type="Texture2D" uid="uid://cos7b8q0xjmu0" path="res://assets/DialogCharacters/Red_Lancer.png" id="2_713rx"]
+[ext_resource type="FontFile" uid="uid://dactcqlk4amps" path="res://fonts/EquipmentPro/EquipmentPro.ttf" id="3_inhqr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6mqn2"]
+line_spacing = 0.0
+font = ExtResource("3_inhqr")
+font_color = Color(0.24286577, 0.2842181, 0.3764366, 1)
+
+[node name="DialogPlayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_713rx")
+
+[node name="DialogCharacter" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 207.0
+offset_right = 1055.0
+offset_bottom = 507.0
+texture = ExtResource("2_713rx")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+
+[node name="DialogTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 400.0
+offset_right = 940.0
+offset_bottom = 700.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_6mqn2")
+stretch_mode = 4
+
+[node name="DialogVerticalContainer" type="VBoxContainer" parent="DialogTexture"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 18.0
+offset_right = -17.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogName" type="Label" parent="DialogTexture/DialogVerticalContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Sr. Bomber Da SIlva"
+label_settings = SubResource("LabelSettings_6mqn2")
+vertical_alignment = 1
+autowrap_mode = 2
+text_overrun_behavior = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogTexture/DialogVerticalContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.24313726, 0.28235295, 0.3764706, 1)
+theme_override_colors/font_shadow_color = Color(0.45840502, 0.45840502, 0.45840514, 0.6039216)
+theme_override_fonts/normal_font = ExtResource("3_inhqr")
+theme_override_font_sizes/normal_font_size = 32
+text = "Welcome to Floating Islands - ya I know it is not actually floating the skyes, but take look: skyes and water here it's same color haha! Well, this is a test demo of what this world could be, this is my destiny... be an npc that only test this sweet dialog box... And I'll be forever serving this only purpose..."
+fit_content = true
