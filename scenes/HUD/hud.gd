@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export var player_object = player.new()
+@export var player_object = Player.new()
 var current_speed = player_object.speed
 
 func _on_dialog_player_open_dialogue() -> void:

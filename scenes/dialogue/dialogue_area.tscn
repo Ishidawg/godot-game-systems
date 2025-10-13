@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://vrnteisu0eli"]
+[gd_scene load_steps=3 format=3 uid="uid://vrnteisu0eli"]
 
 [ext_resource type="Script" uid="uid://isx7mte0ked5" path="res://scenes/dialogue/dialogue_area.gd" id="1_yi4ku"]
+[ext_resource type="Texture2D" uid="uid://bhgb0h06ofa8e" path="res://assets/Controller/buttons/a_button.png" id="2_0f413"]
 
 [node name="DialogueArea" type="Area2D"]
 collision_layer = 0
@@ -8,6 +9,24 @@ collision_mask = 4
 script = ExtResource("1_yi4ku")
 
 [node name="DialogueCollision" type="CollisionShape2D" parent="."]
+
+[node name="interaction_button" type="TextureRect" parent="."]
+visible = false
+z_index = 999
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -117.0
+offset_right = 45.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_0f413")
+stretch_mode = 5
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

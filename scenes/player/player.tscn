@@ -185,13 +185,15 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvxji"]
 radius = 14.0
-height = 48.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p47bc"]
 size = Vector2(108, 82)
 
 [node name="player" type="CharacterBody2D"]
-collision_layer = 5
+collision_layer = 7
+collision_mask = 7
+platform_floor_layers = 4278190081
+platform_wall_layers = 2
 script = ExtResource("1_p47bc")
 
 [node name="player_sprites" type="AnimatedSprite2D" parent="."]
@@ -202,7 +204,7 @@ autoplay = "idle"
 frame_progress = 0.46635774
 
 [node name="player_collision" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 10)
+position = Vector2(1, 21)
 shape = SubResource("CapsuleShape2D_lvxji")
 
 [node name="DialogInteractionArea" type="Area2D" parent="."]
