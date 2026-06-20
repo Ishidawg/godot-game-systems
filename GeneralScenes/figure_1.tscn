@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://6xuvnhpcobxr"]
+
+[ext_resource type="Texture2D" uid="uid://b3oyli3novom4" path="res://icon.svg" id="1_qet74"]
+
+[node name="Node2D" type="Node2D" unique_id=1060444134]
+
+[node name="Head" type="Sprite2D" parent="." unique_id=1762901011]
+position = Vector2(-0.8861084, -207)
+texture = ExtResource("1_qet74")
+
+[node name="Torso" type="Sprite2D" parent="." unique_id=1727291090]
+position = Vector2(0.1138916, 6)
+scale = Vector2(1.421875, 2.359375)
+texture = ExtResource("1_qet74")
+
+[node name="RArm1" type="Sprite2D" parent="." unique_id=1148491654]
+position = Vector2(168.11395, -54.000046)
+rotation = 0.34906584
+scale = Vector2(1.5195308, 0.2617185)
+texture = ExtResource("1_qet74")
+
+[node name="RArm2" type="Sprite2D" parent="RArm1" unique_id=2031378264]
+position = Vector2(100.13461, -44.893555)
+rotation = -0.79713315
+scale = Vector2(1.409364, 0.98526186)
+skew = 0.7667726
+texture = ExtResource("1_qet74")
+
+[node name="LArm1" type="Sprite2D" parent="." unique_id=305572441]
+position = Vector2(-170.88611, -53.999954)
+rotation = -0.34906584
+scale = Vector2(1.5195308, 0.2617185)
+texture = ExtResource("1_qet74")
+
+[node name="LArm2" type="Sprite2D" parent="LArm1" unique_id=1600799244]
+position = Vector2(-104.4635, -54.041626)
+rotation = 0.79713315
+scale = Vector2(1.409364, 0.98526186)
+skew = -0.7667726
+texture = ExtResource("1_qet74")
+
+[node name="LLeg" type="Sprite2D" parent="." unique_id=550822079]
+position = Vector2(-67.38608, 203)
+scale = Vector2(0.3671873, 1.640625)
+texture = ExtResource("1_qet74")
+
+[node name="RLeg" type="Sprite2D" parent="." unique_id=261861733]
+position = Vector2(67.61389, 203)
+scale = Vector2(0.3671873, 1.640625)
+texture = ExtResource("1_qet74")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cnatxa2gwg1uy"]
+
+[ext_resource type="Texture2D" uid="uid://b3oyli3novom4" path="res://icon.svg" id="1_j6taw"]
+[ext_resource type="PackedScene" uid="uid://6xuvnhpcobxr" path="res://GeneralScenes/figure_1.tscn" id="2_1hm5o"]
+
+[node name="FistScene" type="Node2D" unique_id=1884330990]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1182228182]
+position = Vector2(131, 351)
+texture = ExtResource("1_j6taw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1441859808]
+modulate = Color(1.1551381e-06, 0.90903074, 0.48416424, 1)
+position = Vector2(555, 572)
+texture = ExtResource("1_j6taw")
+
+[node name="Figure" parent="." unique_id=1060444134 instance=ExtResource("2_1hm5o")]
+position = Vector2(556, 259)
+scale = Vector2(0.8, 0.8)
