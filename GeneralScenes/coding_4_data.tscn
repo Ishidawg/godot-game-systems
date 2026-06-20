@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b8ea8ift0xp8q"]
+
+[ext_resource type="Script" uid="uid://bkowjo010wgxm" path="res://GeneralScenes/coding_4_data.gd" id="1_2ojim"]
+[ext_resource type="Texture2D" uid="uid://b3oyli3novom4" path="res://icon.svg" id="2_wakkc"]
+
+[node name="Coding4Data" type="Node2D" unique_id=823364467]
+script = ExtResource("1_2ojim")
+
+[node name="CD" type="Sprite2D" parent="." unique_id=1896188052]
+position = Vector2(576, 247)
+texture = ExtResource("2_wakkc")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=320921845]
+position = Vector2(308, 286)
+texture = ExtResource("2_wakkc")

@@ -9,3 +9,7 @@ script = ExtResource("1_v8rxt")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1638596623]
 position = Vector2(302, 189)
 texture = ExtResource("2_ngyln")
+
+[node name="Sprite2DD" type="Sprite2D" parent="." unique_id=418365065]
+position = Vector2(2, 2)
+texture = ExtResource("2_ngyln")

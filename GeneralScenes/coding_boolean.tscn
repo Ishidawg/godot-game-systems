@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bk5hesxx4sjfw"]
+
+[ext_resource type="Script" uid="uid://eynftgw5fcqj" path="res://GeneralScenes/coding_boolean.gd" id="1_8j7k7"]
+[ext_resource type="Texture2D" uid="uid://b3oyli3novom4" path="res://icon.svg" id="2_xrlo2"]
+
+[node name="CodingBoolean" type="Node2D" unique_id=214274112]
+script = ExtResource("1_8j7k7")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1415938069]
+position = Vector2(138, 188)
+texture = ExtResource("2_xrlo2")
